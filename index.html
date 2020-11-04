@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RWD</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: '微軟正黑體';
+        font-weight: 900;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .item,
+      .item-main {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-bottom: 2px solid #ccc;
+      }
+
+      .logo {
+        width: 30%;
+        padding-bottom: 20px;
+      }
+
+      .item > .title,
+      .item > .text {
+        text-align: left;
+      }
+
+      .item-main > .logo {
+        padding-bottom: 0px;
+      }
+
+      .item-main > .title {
+        padding-bottom: 20px;
+        font-size: 1.8rem;
+      }
+
+      .item-main > .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item-main > .text span:nth-child(1) {
+        font-size: 1.5rem;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          position: relative;
+        }
+
+        .item,
+        .item-main {
+          width: 7%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          border-bottom: none;
+        }
+
+        .item-main {
+          width: 40%;
+          top: 50%;
+          left: 50%;
+        }
+
+        .item > .logo {
+          width: 100%;
+          min-width: 5rem;
+        }
+
+        .item-main > .logo {
+          min-width: 9.3rem;
+        }
+
+        .item > .title {
+          text-align: center;
+        }
+        .item > .text {
+          display: none;
+        }
+
+        .item-main > .title {
+          font-size: 2.2rem;
+        }
+        .item-main > .text span:nth-child(1) {
+          font-size: 1.9rem;
+        }
+        .item-main > .text span:nth-child(1n + 2) {
+          font-size: 1.25rem;
+        }
+
+        .item-html {
+          left: 8%;
+          top: 22%;
+        }
+        .item-css {
+          left: 30%;
+          top: 15%;
+        }
+        .item-js {
+          left: 15%;
+          top: 52%;
+        }
+        .item-bootstrap {
+          left: 70%;
+          top: 13%;
+        }
+        .item-sass {
+          left: 85%;
+          top: 33%;
+        }
+        .item-jquery {
+          left: 28%;
+          top: 72%;
+        }
+        .item-vue {
+          left: 74%;
+          top: 67%;
+        }
+
+        .item:nth-child(1n + 2)::before {
+          content: '';
+          position: absolute;
+          height: 3px;
+          background-color: #ccc;
+        }
+
+        .item-html::before {
+          width: 440%;
+          top: 70%;
+          left: 100%;
+          transform-origin: left;
+          transform: rotate(12deg);
+        }
+
+        .item-css::before {
+          width: 160%;
+          top: 70%;
+          left: 100%;
+          transform-origin: left;
+          transform: rotate(35deg);
+        }
+
+        .item-js::before {
+          width: 335%;
+          top: 40%;
+          left: 100%;
+          transform-origin: left;
+          transform: rotate(-3deg);
+        }
+
+        .item-bootstrap::before {
+          width: 180%;
+          top: 70%;
+          left: -180%;
+          transform-origin: right;
+          transform: rotate(-35deg);
+        }
+
+        .item-sass::before {
+          width: 350%;
+          top: 40%;
+          left: -350%;
+          transform-origin: right;
+          transform: rotate(-10deg);
+        }
+
+        .item-jquery::before {
+          width: 180%;
+          top: 10%;
+          left: 100%;
+          transform-origin: left;
+          transform: rotate(-25deg);
+        }
+
+        .item-vue::before {
+          width: 220%;
+          top: 20%;
+          left: -220%;
+          transform-origin: right;
+          transform: rotate(25deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-main">
+        <img class="logo" src="./images/logo.png" />
+        <h2 class="title">泰山職訓局</h2>
+        <p class="text">
+          <span>從零開始的網頁設計課程</span>
+          <span>轉職網頁開發人員 &nbsp; 掌握就業必備技能</span>
+          <span>由淺入深學習技術 &nbsp; 強化職場的競爭力</span>
+        </p>
+      </div>
+
+      <div class="item item-html">
+        <img class="logo" src="./images/html.png" />
+        <h2 class="title">HTML</h2>
+        <p class="text">
+          超文本標記語言（英語：HyperText Markup
+          Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+        </p>
+      </div>
+
+      <div class="item item-css">
+        <img class="logo" src="./images/css.png" />
+        <h2 class="title">CSS3</h2>
+        <p class="text">
+          階層式樣式表（英語：Cascading Style
+          Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、層疊樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。目前最新版本是CSS2.1，為W3C的推薦標準。[來源請求]CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。
+        </p>
+      </div>
+
+      <div class="item item-js">
+        <img class="logo" src="./images/js.png" />
+        <h2 class="title">JavaScript</h2>
+        <p class="text">
+          JavaScript（通常縮寫為JS）是一種進階的、直譯的程式語言。JavaScript是一門基於原型、函式先行的語言，是一門多範式的語言，它支援物件導向程式設計，指令式程式設計，以及函式語言程式設計。它提供語法來操控文字、陣列、日期以及正規表示式等，不支援I/O，比如網路、儲存和圖形等，但這些都可以由它的宿主環境提供支援。它已經由ECMA（歐洲電腦製造商協會）透過ECMAScript實作語言的標準化。它被世界上的絕大多數網站所使用，也被世界主流瀏覽器（Chrome、IE、Firefox、Safari、Opera）支援。
+        </p>
+      </div>
+
+      <div class="item item-bootstrap">
+        <img class="logo" src="./images/bootstrap.png" />
+        <h2 class="title">Bootstrap</h2>
+        <p class="text">
+          Bootstrap是一組用於網站和網路應用程式開發的開源前端（所謂「前端」，指的是展現給終端使用者的介面。與之對應的「後端」是在伺服器上面執行的代碼）框架，包括HTML、CSS及JavaScript的框架，提供字體排印、表單、按鈕、導航及其他各種元件及Javascript擴充套件，旨在使動態網頁和Web應用的開發更加容易。
+        </p>
+      </div>
+
+      <div class="item item-sass">
+        <img class="logo" src="./images/sass.png" />
+        <h2 class="title">Sass</h2>
+        <p class="text">
+          Sass（英文全稱：Syntactically Awesome Stylesheets）是一個最初由Hampton Catlin設計並由Natalie
+          Weizenbaum開發的層疊樣式表語言。在開發最初版本之後，Weizenbaum和Chris
+          Eppstein繼續通過SassScript來繼續擴充Sass的功能。SassScript是一個在Sass檔案中使用的小型手稿語言。
+        </p>
+      </div>
+
+      <div class="item item-jquery">
+        <img class="logo" src="./images/jquery.png" />
+        <h2 class="title">jQuery</h2>
+        <p class="text">
+          jQuery是一套跨瀏覽器的JavaScript函式庫，簡化HTML與JavaScript之間的操作。[1]由約翰·雷西格（John
+          Resig）在2006年1月的BarCamp NYC上釋出第一個版本。目前由Dave
+          Methvin領導的團隊進行開發。全球前10,000個存取最高的網站中，有65%使用了jQuery，是目前最受歡迎的JavaScript函式庫。
+        </p>
+      </div>
+
+      <div class="item item-vue">
+        <img class="logo" src="./images/vue.png" />
+        <h2 class="title">Vue.js</h2>
+        <p class="text">
+          Vue.js（/vjuː/，或簡稱為Vue）是一個用於建立使用者介面的開源JavaScript框架，也是一個建立單頁應用的Web應用框架。
+          2016年一項針對JavaScript的調查表明，Vue有著89%的開發者滿意度。在GitHub上，該專案平均每天能收穫95顆星，為Github有史以來星標數第3多的專案。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
